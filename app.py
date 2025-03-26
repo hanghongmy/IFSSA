@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import joblib
+import shap
+import matplotlib.pyplot as plt
+import xgboost as xgb
 
 # Load the dataset
 data = pd.read_csv('Processed_data_latest.csv', encoding='latin1')
@@ -79,6 +82,23 @@ def machine_learning_modeling_1m():
 
             st.success("✅ Will Return" if prediction == 1 else "❌ Not Return")
             st.write(f"Probability → Will Return: {proba[1]:.2f} | Not Return: {proba[0]:.2f}")
+
+            # Initialize SHAP explainer (this works for XGBoost)
+            explainer = shap.Explainer(model)
+
+            # Calculate SHAP values for this input
+            shap_values = explainer(input_df)
+
+            # Show explanation
+            st.subheader("🧠 SHAP Explanation")
+            st.write("This shows how each input contributed to the model's decision:")
+
+            # Generate SHAP waterfall plot using matplotlib backend
+            fig, ax = plt.subplots(figsize=(10, 5))
+            shap.plots.waterfall(shap_values[0], max_display=6, show=False)
+            plt.tight_layout()
+            st.pyplot(fig)
+
         except Exception as e:
             st.error(f"Prediction failed: {e}")
 
@@ -118,6 +138,23 @@ def machine_learning_modeling_3m():
 
             st.success("✅ Will Return" if prediction == 1 else "❌ Not Return")
             st.write(f"Probability → Will Return: {proba[1]:.2f} | Not Return: {proba[0]:.2f}")
+
+            # Initialize SHAP explainer (this works for XGBoost)
+            explainer = shap.Explainer(model)
+
+            # Calculate SHAP values for this input
+            shap_values = explainer(input_df)
+
+            # Show explanation
+            st.subheader("🧠 SHAP Explanation")
+            st.write("This shows how each input contributed to the model's decision:")
+
+            # Generate SHAP waterfall plot using matplotlib backend
+            fig, ax = plt.subplots(figsize=(10, 5))
+            shap.plots.waterfall(shap_values[0], max_display=6, show=False)
+            plt.tight_layout()
+            st.pyplot(fig)
+
         except Exception as e:
             st.error(f"Prediction failed: {e}")
             
