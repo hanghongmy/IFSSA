@@ -148,14 +148,14 @@ def machine_learning_modeling_3m():
             family_name = data['family_name'].dropna().sample(1).values[0]
             st.success("✅ Will Return" if prediction == 1 else "❌ Not Return")
             st.write(f"Probability → Will Return: {proba[1]:.2f} | Not Return: {proba[0]:.2f}")
-            
+
             if prediction == 1:
               st.success(f"✅ The client is likely to return.")
               st.info(f"Suggestion for {family_name}: Continue routine outreach and record future visits.")
             else:
               st.error(f"❌ The client is unlikely to return.")
               st.warning(f"Suggestion for {family_name}: Consider a follow-up call, support check-in, or sending a reminder message.")
- 
+
             # Initialize SHAP explainer (this works for XGBoost)
             explainer = shap.Explainer(model)
 
