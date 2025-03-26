@@ -31,17 +31,17 @@ def exploratory_data_analysis():
     with st.expander("📌 Dataset Preview"):
         st.write(data.head())
 
-    if 'Age' in data.columns:
-        st.plotly_chart(px.histogram(data, x="Age", nbins=20, title="Age Distribution"))
+    if 'age_group' in data.columns:
+        st.plotly_chart(px.histogram(data, x="age_group", nbins=20, title="Age Distribution"))
 
-    if 'Gender' in data.columns:
-        st.plotly_chart(px.histogram(data, x="Gender", title="Gender Distribution"))
+    if 'Sex' in data.columns:
+        st.plotly_chart(px.histogram(data, x="Sex", title="Gender Distribution"))
 
     if 'distance_km' in data.columns:
         st.plotly_chart(px.histogram(data, x="distance_km", title="Distance from IFSSA"))
 
-    if 'Pickup_day' in data.columns:
-        st.plotly_chart(px.histogram(data, x="Pickup_day", title="Pickup Day Distribution"))
+    if 'scheduled_weekday' in data.columns:
+        st.plotly_chart(px.histogram(data, x="scheduled_weekday", title="Pickup Day Distribution"))
 
 # Modeling Page
 def machine_learning_modeling_1m():
