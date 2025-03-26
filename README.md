@@ -70,6 +70,9 @@ Have questions or want to collaborate? Reach out to us via email:
 
 ---
 
+### Streamlit App
+https://cyvivqjsz4detubmje6zez.streamlit.app/
+
 ### 🎉 Closing Note
 
 > “Looking forward to making a meaningful impact through data-driven solutions. Thank you for visiting our project!”
