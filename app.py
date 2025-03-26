@@ -44,8 +44,8 @@ def exploratory_data_analysis():
         st.plotly_chart(px.histogram(data, x="Pickup_day", title="Pickup Day Distribution"))
 
 # Modeling Page
-def machine_learning_modeling():
-    st.title("🔮 Predict Client Return")
+def machine_learning_modeling_1m():
+    st.title("🔮 Predict Client Return for 1 month")
 
     st.write("Enter client details below to predict return likelihood:")
 
@@ -82,6 +82,45 @@ def machine_learning_modeling():
         except Exception as e:
             st.error(f"Prediction failed: {e}")
 
+# Modeling Page
+def machine_learning_modeling_3m():
+    st.title("🔮 Predict Client Return for 3 month")
+
+    st.write("Enter client details below to predict return likelihood:")
+
+    # Input Fields matching model's required features
+    distance = st.slider("Distance from IFSSA (km)", 0, 50, 10)
+    pickup_day = st.selectbox("Pickup Day", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
+    dependents_qty = st.slider("Number of Dependents", 0, 10, 1)
+    age_group = st.selectbox("Age Group", ['0-18', '19-30', '31-45', '46-65', '65+'])
+    scheduled_month = st.selectbox("Scheduled Month", list(range(1, 13)))
+    scheduled_weekday = st.selectbox("Scheduled Weekday", ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
+
+    if st.button("Predict"):
+        try:
+            model = joblib.load("3m_XGBoost_smote.pkl")
+
+            # Encode categorical fields
+            pickup_map = {'Monday': 0, 'Tuesday': 1, 'Wednesday': 2, 'Thursday': 3, 'Friday': 4, 'Saturday': 5, 'Sunday': 6}
+            age_group_map = {'0-18': 0, '19-30': 1, '31-45': 2, '46-65': 3, '65+': 4}
+
+            input_df = pd.DataFrame([{
+                'distance_km': distance,
+                'pickup_day': pickup_map[pickup_day],
+                'dependents_qty': dependents_qty,
+                'age_group_encoded': age_group_map[age_group],
+                'scheduled_month': scheduled_month,
+                'scheduled_weekday_encoded': pickup_map[scheduled_weekday]
+            }])
+
+            prediction = model.predict(input_df)[0]
+            proba = model.predict_proba(input_df)[0]
+
+            st.success("✅ Will Return" if prediction == 1 else "❌ Not Return")
+            st.write(f"Probability → Will Return: {proba[1]:.2f} | Not Return: {proba[0]:.2f}")
+        except Exception as e:
+            st.error(f"Prediction failed: {e}")
+            
 # Main App Logic
 def main():
     st.sidebar.title("Food Drive App")
@@ -91,8 +130,10 @@ def main():
         dashboard()
     elif app_page == "EDA":
         exploratory_data_analysis()
-    elif app_page == "ML Modeling":
-        machine_learning_modeling()
+    elif app_page == "Predicting Client Return in 1 month":
+        machine_learning_modeling_1m()
+    elif app_page == "Predicting Client Return in 3 month":
+        machine_learning_modeling_3m()
 
 if __name__ == "__main__":
     main()
