@@ -25,15 +25,20 @@ IFSSA faces challenges in predicting which clients will return after receiving a
 ### 💡 Solution
 
 We developed a **machine learning model** to predict the likelihood of client return based on:
-- Hamper pickup history
-- Demographic features
-- Event participation
-- Service usage patterns
+- 🧾 Hamper pickup history  
+- 👤 Demographic features  
+- 🎟️ Event participation  
+- 📊 Service usage patterns
 
-**Models Used:**
-- Logistic Regression
-- Random Forest Classifier
-- XGBoost
+**Tech Used:**
+- **Python** for data processing and modeling  
+- **Pandas & NumPy** for data manipulation  
+- **Scikit-learn, XGBoost** for machine learning modeling  
+- **Imbalanced-learn (SMOTE)** for handling class imbalance  
+- **SHAP** for model explainability  
+- **Matplotlib & Plotly** for visualization  
+- **Streamlit** for interactive web app development  
+- **Git & GitHub** for version control and collaboration 
 
 The best-performing model achieved over **90% accuracy**, helping identify at-risk clients for targeted engagement.
 
@@ -43,10 +48,17 @@ The best-performing model achieved over **90% accuracy**, helping identify at-ri
 
 The repository contains the following files and folders:
 
-- `data/client_data.csv`: Contains anonymized demographic and service usage data  
-- `data/hamper_data.csv`: Includes pickup history and hamper service details  
-- `notebooks/`: Contains Jupyter notebooks for data cleaning, EDA, feature engineering, and model training    
-- `README.md`: Overview of the project (you’re here!)
+```text
+📁 data/
+   ├── client_data.csv        # Anonymized demographic and service usage data
+   └── hamper_data.csv        # Pickup history and hamper service details
+
+📁 notebooks/
+   └── Data cleaning, EDA, feature engineering, and model training
+
+📄 app.py                     # Streamlit app for live prediction
+📄 README.md                  # Project overview (this file)
+📄 requirements.txt           # Python dependencies
 
 ---
 
