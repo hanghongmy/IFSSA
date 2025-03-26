@@ -123,7 +123,7 @@ def machine_learning_modeling_3m():
             
 # Main App Logic
 def main():
-    st.sidebar.title("Food Drive App")
+    st.sidebar.title("IFSSA_Predict Client Retention App")
     app_page = st.sidebar.radio("Select a Page", ["Dashboard", "EDA", "ML Modeling"])
 
     if app_page == "Dashboard":
