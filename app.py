@@ -5,6 +5,7 @@ import joblib
 import shap
 import matplotlib.pyplot as plt
 import xgboost as xgb
+from datetime import datetime, timedelta
 
 # Load the dataset
 data = pd.read_csv('Processed_data_latest.csv', encoding='latin1')
@@ -79,10 +80,18 @@ def machine_learning_modeling_1m():
 
             prediction = model.predict(input_df)[0]
             proba = model.predict_proba(input_df)[0]
+            # Select a random family_name to personalize suggestion
+            family_name = data['family_name'].dropna().sample(1).values[0]
 
             st.success("✅ Will Return" if prediction == 1 else "❌ Not Return")
             st.write(f"Probability → Will Return: {proba[1]:.2f} | Not Return: {proba[0]:.2f}")
 
+            if prediction == 1:
+              st.success(f"✅ The client is likely to return.")
+              st.info(f"Suggestion for {family_name}: Continue routine outreach and record future visits.")
+            else:
+              st.error(f"❌ The client is unlikely to return.")
+              st.warning(f"Suggestion for {family_name}: Consider a follow-up call, support check-in, or sending a reminder message.")
             # Initialize SHAP explainer (this works for XGBoost)
             explainer = shap.Explainer(model)
 
@@ -135,10 +144,18 @@ def machine_learning_modeling_3m():
 
             prediction = model.predict(input_df)[0]
             proba = model.predict_proba(input_df)[0]
-
+            # Select a random family_name to personalize suggestion
+            family_name = data['family_name'].dropna().sample(1).values[0]
             st.success("✅ Will Return" if prediction == 1 else "❌ Not Return")
             st.write(f"Probability → Will Return: {proba[1]:.2f} | Not Return: {proba[0]:.2f}")
-
+            
+            if prediction == 1:
+              st.success(f"✅ The client is likely to return.")
+              st.info(f"Suggestion for {family_name}: Continue routine outreach and record future visits.")
+            else:
+              st.error(f"❌ The client is unlikely to return.")
+              st.warning(f"Suggestion for {family_name}: Consider a follow-up call, support check-in, or sending a reminder message.")
+ 
             # Initialize SHAP explainer (this works for XGBoost)
             explainer = shap.Explainer(model)
 
@@ -157,7 +174,7 @@ def machine_learning_modeling_3m():
 
         except Exception as e:
             st.error(f"Prediction failed: {e}")
-            
+
 # Main App Logic
 def main():
     st.sidebar.title("IFSSA_Predicting Client Retention")
