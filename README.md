@@ -75,6 +75,7 @@ Our team consists of the following members:
 ### 📫 Get in Touch
 
 Have questions or want to collaborate? Reach out to us via email:
+https://gurrajkaur13-1742574967747.atlassian.net/wiki/x/aQAE?atlOrigin=eyJpIjoiODEzMTAzN2IwODdkNDJjNmEyMmQ4NzAxM2JhMjI2MjYiLCJwIjoiYyJ9
 
 - **My Hang Hong:** hhong@norquest.ca  
 - **Kiranpreet Kaur:** 
