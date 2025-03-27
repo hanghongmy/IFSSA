@@ -50,8 +50,9 @@ The repository contains the following files and folders:
 
 ```text
 📁 data/
-   ├── client_data.csv        # Anonymized demographic and service usage data
-   └── hamper_data.csv        # Pickup history and hamper service details
+   ├── client_data.csv              # Anonymized demographic and service usage data
+   └── hamper_data.csv              # Pickup history and hamper service details
+   └── Processed_data_latest.csv    # The merged and cleaned data with new features
 
 📁 notebooks/
    └── Data cleaning, EDA, feature engineering, and model training
@@ -59,6 +60,14 @@ The repository contains the following files and folders:
 📄 app.py                     # Streamlit app for live prediction
 📄 README.md                  # Project overview (this file)
 📄 requirements.txt           # Python dependencies
+📄 logs.txt
+📄 package-lock.json
+📄 logo.jpeg
+📄 IFFSA_Family_2.png
+📄 1m_XGBoost_smote.pkl        # Best trained models required for deploying application
+📄 3m_XGBoost_smote.pk
+📄 6m_XGBoost_smote.pk
+
 
 ---
 
@@ -78,13 +87,13 @@ Have questions or want to collaborate? Reach out to us via email:
 Notion: https://gurrajkaur13-1742574967747.atlassian.net/wiki/external/NGI3MDQ4NTY3ZWVmNDA4NmE3YmFmYjI5MmZhNGQxYTQ
 
 - **My Hang Hong:** hhong@norquest.ca  
-- **Kiranpreet Kaur:** 
-- **Gurraj Kaur:**
+- **Kiranpreet Kaur:** klnu72norquest.ca
+- **Gurraj Kaur:** ggill533@norquest.ca
 
 ---
 
 ### Streamlit App
-https://cyvivqjsz4detubmje6zez.streamlit.app/
+https://9vbk24bvsyjc9uxg3s6ppq.streamlit.app/
 
 ### 🎉 Closing Note
 
