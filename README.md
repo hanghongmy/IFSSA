@@ -88,8 +88,8 @@ Have questions or want to collaborate? Reach out to us via email:
 
 **Streamlit App:** https://9vbk24bvsyjc9uxg3s6ppq.streamlit.app
 
-- **My Hang Hong:** hhong@norquest.ca  
-- **Kiranpreet Kaur:** klnu72norquest.ca
+- **My Hang Hong:** hhong@norquest.ca - https://www.linkedin.com/in/helen-hong-40385415b 
+- **Kiranpreet Kaur:** klnu72@norquest.ca
 - **Gurraj Kaur:** ggill533@norquest.ca
 
 
