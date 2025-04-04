@@ -71,7 +71,7 @@ The repository contains the following files and folders:
 
 ---
 
-### 👥 Team Members
+👥 Team Members
 
 Our team consists of the following members:
 
@@ -81,7 +81,7 @@ Our team consists of the following members:
 
 ---
 
-### 📫 Get in Touch
+📫 Get in Touch
 
 Have questions or want to collaborate? Reach out to us via email:
 Notion:https://gurrajkaur13-1742574967747.atlassian.net/wiki/external/NGI3MDQ4NTY3ZWVmNDA4NmE3YmFmYjI5MmZhNGQxYTQ
@@ -98,5 +98,4 @@ Streamlit App: https://9vbk24bvsyjc9uxg3s6ppq.streamlit.app
 ### 🎉 Closing Note
 
 > “Looking forward to making a meaningful impact through data-driven solutions. Thank you for visiting our project!”
-🚀 Streamlit App
-🔗 Click here to try our Streamlit App
+
