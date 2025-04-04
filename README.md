@@ -84,7 +84,7 @@ Our team consists of the following members:
 ### 📫 Get in Touch
 
 Have questions or want to collaborate? Reach out to us via email:
-Notion: https://gurrajkaur13-1742574967747.atlassian.net/wiki/external/NGI3MDQ4NTY3ZWVmNDA4NmE3YmFmYjI5MmZhNGQxYTQ
+Notion: (https://gurrajkaur13-1742574967747.atlassian.net/wiki/external/NGI3MDQ4NTY3ZWVmNDA4NmE3YmFmYjI5MmZhNGQxYTQ)
 
 - **My Hang Hong:** hhong@norquest.ca  
 - **Kiranpreet Kaur:** klnu72norquest.ca
@@ -93,7 +93,7 @@ Notion: https://gurrajkaur13-1742574967747.atlassian.net/wiki/external/NGI3MDQ4N
 ---
 
 ### Streamlit App
-https://9vbk24bvsyjc9uxg3s6ppq.streamlit.app/
+(https://9vbk24bvsyjc9uxg3s6ppq.streamlit.app)
 
 ### 🎉 Closing Note
 
