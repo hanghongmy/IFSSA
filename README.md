@@ -44,7 +44,7 @@ The best-performing model achieved over **90% accuracy**, helping identify at-ri
 
 ---
 
-### 📂 Repository Structure
+📂 Repository Structure
 
 The repository contains the following files and folders:
 
@@ -90,12 +90,10 @@ Notion:https://gurrajkaur13-1742574967747.atlassian.net/wiki/external/NGI3MDQ4NT
 - **Kiranpreet Kaur:** klnu72norquest.ca
 - **Gurraj Kaur:** ggill533@norquest.ca
 
----
-
-###
+```
 Streamlit App: https://9vbk24bvsyjc9uxg3s6ppq.streamlit.app
 
-### 🎉 Closing Note
+🎉 Closing Note
 
 > “Looking forward to making a meaningful impact through data-driven solutions. Thank you for visiting our project!”
 
