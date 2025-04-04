@@ -68,8 +68,6 @@ The repository contains the following files and folders:
 📄 3m_XGBoost_smote.pk
 📄 6m_XGBoost_smote.pk
 
-
----
 ```
 
 👥 Team Members
@@ -86,6 +84,7 @@ Our team consists of the following members:
 
 Have questions or want to collaborate? Reach out to us via email:
 **Notion:** https://gurrajkaur13-1742574967747.atlassian.net/wiki/external/NGI3MDQ4NTY3ZWVmNDA4NmE3YmFmYjI5MmZhNGQxYTQ
+
 **Streamlit App:** https://9vbk24bvsyjc9uxg3s6ppq.streamlit.app
 
 - **My Hang Hong:** hhong@norquest.ca  
