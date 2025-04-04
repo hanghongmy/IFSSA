@@ -190,7 +190,7 @@ def main():
     st.sidebar.title("IFSSA Client Retention Prediction")
     app_page = st.sidebar.radio("Select a Page", [
         "Dashboard",
-        "EDA",
+        "Exploratory Data Analysis",
         "Predicting Return in 1 Month",
         "Predicting Return in 3 Month",
         "Predicting Return in 6 Month",
@@ -200,7 +200,7 @@ def main():
 
     if app_page == "Dashboard":
         dashboard()
-    elif app_page == "EDA":
+    elif app_page == "Exploratory Data Analysis":
         exploratory_data_analysis()
     elif app_page == "Predicting Return in 1 Month":
         predict_page("1", "1m_XGBoost_smote.pkl")
