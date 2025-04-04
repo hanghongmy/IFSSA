@@ -93,7 +93,7 @@ Have questions or want to collaborate? Reach out to us via email:
 ---
 
 ###
-[Streamlit App]((https://9vbk24bvsyjc9uxg3s6ppq.streamlit.app)
+[Streamlit App](https://9vbk24bvsyjc9uxg3s6ppq.streamlit.app)
 
 ### 🎉 Closing Note
 
