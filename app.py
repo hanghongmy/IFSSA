@@ -185,7 +185,7 @@ def main():
 
     if app_page == "Dashboard":
         dashboard()
-    elif app_page == "EDA":
+    elif app_page == "Exploratory Data Analysis":
         exploratory_data_analysis()
     elif app_page == "Predicting Return in 1 Month":
         predict_page("1", "1m_XGBoost_smote.pkl")
